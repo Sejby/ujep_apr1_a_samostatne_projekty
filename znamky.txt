@@ -1,0 +1,3 @@
+pepicek: 1,5,3
+anicka: 4,2,2
+jarmila: 1,1,2

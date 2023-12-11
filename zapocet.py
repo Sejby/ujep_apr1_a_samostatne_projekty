@@ -326,6 +326,8 @@ if __name__ == "__main__":
 
 Napište funkci, do které vložíte cestu k souboru. Funkce vrátí slovník, kde klíčem je slovo a hodnotou je jeho počet výskytů v textu souboru. Tento slovník bude následně funkcí vrácen. '''
 
+
+"""
 from typing import Dict
 
 cesta = "./test.txt"
@@ -343,3 +345,20 @@ def slovnik_ze_souboru(cesta: str)->Dict:
     
     
 slovnik_ze_souboru(cesta=cesta)
+
+"""
+
+
+def leibnizuv_vzorec(n):
+    soucet = 0
+    for i in range(n):
+        pocet_opakovani = (-1) ** i /(2*i+1)
+        soucet = soucet + pocet_opakovani
+    
+    return soucet * 4
+
+pocet_opakovani = int(input("Zadej počet n "))
+
+pi = leibnizuv_vzorec(pocet_opakovani)
+
+print("Pi = ", pi)

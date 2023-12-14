@@ -81,7 +81,7 @@ def vratSouborySamohlasky(cesta: str):
         print(soubory)
         for soubor in soubory:
             if soubor[0] in samohlasky:
-                shutil.copy2(soubor, pracovni_adresar + "/" + "samohlasky/" + soubor)
+                shutil.copy2(soubor, pracovni_adresar + "/" + "samohlasky/" + soubor)   #absolutní cesta
             else:
                 shutil.copy2(soubor, pracovni_adresar + "/" + "souhlasky/" + soubor)
         os.chdir("..")

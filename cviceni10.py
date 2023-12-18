@@ -85,8 +85,6 @@ def vratSouborySamohlasky(cesta: str):
             else:
                 shutil.copy2(soubor, pracovni_adresar + "/" + "souhlasky/" + soubor)
         os.chdir("..")
-                
-vratSouborySamohlasky(cesta=cesta)
 
 #naleznete všechny soubory v adresari a zkopirujte jejich textovy obsah do jednoho spolecneho textoveho souboru
 
@@ -99,3 +97,19 @@ vratSouborySamohlasky(cesta=cesta)
 # napište funkci pomoci lambda a filter do ktere vlozite seznam retezcu a ona vyfiltruje ty, ktere maji pocet samohlasek < 3
 
 #napiste funkci do ktere vlozite seznam slov a ona vam vrati kolikrat se tam nachazi velkych a malych pismen. Vratte to jako slovnik, kde klicem je male a velke a hodnotu je jejich pocet
+
+from typing import Dict
+from collections import Counter
+
+retezec = "Haha ty jsi ale budulínek"
+
+
+def zjistiMalaVelkaPismena(retezec: str)->Dict:
+    vysledek = {}
+    for pismeno in "".join(retezec.split()):
+        vysledek[pismeno] = retezec.count(pismeno)
+    
+    return vysledek
+
+
+print(zjistiMalaVelkaPismena(retezec=retezec))
